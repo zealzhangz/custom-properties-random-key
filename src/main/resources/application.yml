@@ -1,0 +1,7 @@
+
+
+
+
+randomKey:
+  value1: "${randomKey.key}"
+  value2: "${randomKey.key(128)}"
