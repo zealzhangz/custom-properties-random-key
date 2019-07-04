@@ -224,6 +224,19 @@ public class PropertySourceConfig {
 testKey: ${randomKey.key}
 ```
 
+### Demo
+[Demo Github](https://github.com/zealzhangz/custom-properties-random-key)
+
+### 实际运行结果
+在浏览器访问：`http://127.0.0.1:8080/test`
+
+```json
+{
+    "value2": "fFlgx90qS58F6ljaP5WY4p4F8hdq71396SJiY5WwC0103906PiiQbKBl13tt8an906T082Mrw5177cH04hyB80168leY9ScYa4E8Jo5j519xakXAjlmWTI2o9K49FBd9",
+    "value1": "DP7eg8i27633zvNxzFUvD3hzum5LDJJPY3p77vHV28II2Y1S090dSRbK2S57EcmF"
+}
+```
+
 # 注意事项
 我本次使用的场景是微服务的场景，本来是想在 `Spring Config Server` 模块生成一个统一的 `JWT Token` 签名的密钥，但是发现实际上在 `Spring Config Server` 定义改功能后，各个子模块其实也是取不到值的，必须把这个功能分别配置在各个模块，各个模块实际使用的时候各自调用生成各自的随机值。
 
